@@ -18,7 +18,7 @@ const Layout = (props) => {
         <div className='fixed top-4 right-4 h-full flex flex-col items-center justify-start 
         md:h-fit md:flex-row md:w-full md:justify-end
        '>
-          <div className=' md:flex md:basis-3/4 bg-yellow-200  md:justify-around'>
+          <div className=' md:flex md:basis-3/4  md:justify-around'>
           <img src="home-svgrepo-com.svg" alt="Home" width={40} height={40} className='my-2'/>
           <img src="/about-successful-man-svgrepo-com.svg" alt="about" width={40} height={40} className='my-2'/>
           <img src="/education-svgrepo-com.svg" alt="edu" width={40} height={40} className='my-2'/>
