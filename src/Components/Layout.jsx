@@ -20,13 +20,13 @@ const Layout = (props) => {
        '>
           <div className=' md:flex md:basis-3/4 bg-yellow-200  md:justify-around'>
           <img src="home-svgrepo-com.svg" alt="Home" width={40} height={40} className='my-2'/>
-          <img src="/public/about-successful-man-svgrepo-com.svg" alt="about" width={40} height={40} className='my-2'/>
-          <img src="/public/education-svgrepo-com.svg" alt="edu" width={40} height={40} className='my-2'/>
-          <img src="/public/skill.svg" alt="skill" width={40} height={40} className='my-2'/>
-          <img src="/public/project-21.svg" alt="projects" width={40} height={40} className='my-2'/>
-          <img src="/public/experience.svg" alt="Experience" width={40} height={40} className='my-2'/>
-          <img src="/public/contact-svgrepo-com.svg" alt="Contact" width={40} height={40} className='my-2'/>
-          <img src="/public/resume-portfolio-svgrepo-com.svg" alt="Resume" width={40} height={40} className='my-2'/>
+          <img src="/about-successful-man-svgrepo-com.svg" alt="about" width={40} height={40} className='my-2'/>
+          <img src="/education-svgrepo-com.svg" alt="edu" width={40} height={40} className='my-2'/>
+          <img src="/skill.svg" alt="skill" width={40} height={40} className='my-2'/>
+          <img src="/project-21.svg" alt="projects" width={40} height={40} className='my-2'/>
+          <img src="/experience.svg" alt="Experience" width={40} height={40} className='my-2'/>
+          <img src="/contact-svgrepo-com.svg" alt="Contact" width={40} height={40} className='my-2'/>
+          <img src="/resume-portfolio-svgrepo-com.svg" alt="Resume" width={40} height={40} className='my-2'/>
           
           </div>
         </div>
