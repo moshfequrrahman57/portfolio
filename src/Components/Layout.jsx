@@ -8,7 +8,7 @@ const Layout = (props) => {
         <div className='absolute bottom-0 left-0 w-full md:w-fit md:h-full
        md:flex md:flex-col md:justify-center md:items-center'>
         <div className='bg-slate-400 md:bg-transparent flex items-center justify-around md:flex-col py-4 '>
-        <img src="/public/linkedin-round-svgrepo-com.svg" alt="linkedin" width={40} height={40} className=' md:my-2 md:ml-4 md:p-0' />
+        <img src="/linkedin-round-svgrepo-com.svg" alt="linkedin" width={40} height={40} className=' md:my-2 md:ml-4 md:p-0' />
       <img src="/facebook-svgrepo-com (1).svg" alt="facebook" width={40} height={40} className=' md:my-2 md:ml-4 md:p-0 ' />
       <img src="/gmail-svgrepo-com.svg" alt="gmail" width={40} height={40} className=' md:my-2 md:ml-4 md:p-0' />
       <img src="/instagram-rounded-svgrepo-com.svg" alt="insta" width={40} height={40} className=' md:my-2 md:ml-4 md:p-0' />
