@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Homepages from './Pages/Homepages';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
@@ -10,7 +10,7 @@ const App = () => {
       <Route path="/" element={<Homepages/>} />
     </Routes>
     </BrowserRouter>
-    </div>
+   </div>
   );
 };
 
