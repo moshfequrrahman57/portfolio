@@ -2,10 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.clip-end-dup{
+    clip-path: circle(400px);
+ }
 .active_dropdown{
-    @apply flex;
+    display: flex;
+}
+.not_active{
+    display: none;
+}
+.no-scroll{
+    overflow: hidden;
+  }
+.opacity_full{
+    @apply opacity-100;
+}
+.opacity_low{
+    @apply opacity-10;
 }
 
-.active_linked{
-    @apply hidden;
+.rotate_180{
+    @apply rotate-180;
 }
+.blur_filter{
+ display: flex;
+  backdrop-filter: blur(50px);
+  @apply absolute  top-0 left-0 w-full h-screen bg-emerald-300 -z-10;
+}
+
+@layer utilities{
+   .clip-start {
+        clip-path: circle(0px at right top);
+ 
+    }
+}
+
