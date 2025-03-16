@@ -35,5 +35,21 @@
         clip-path: circle(0px at right bottom);
  
     }
+
+    .object_top{
+        object-position: 0% 50%;
+    }
+    .filer_color_blue{
+        filter: invert(72%) sepia(61%) saturate(6928%) hue-rotate(162deg) brightness(95%) contrast(101%);
+    }
+}
+
+@layer components{
+    .important_link_design{
+        @apply w-9 h-9 p-1 mr-2 hover:filer_color_blue;
+    }
+    .nav_item{
+        @apply md:mx-1 mt-1 md:mt-0 w-full md:w-fit flex items-center justify-start rounded-lg  hover:bg-slate-100 ;
+    }
 }
 
