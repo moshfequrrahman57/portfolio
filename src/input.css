@@ -39,17 +39,23 @@
     .object_top{
         object-position: 0% 50%;
     }
-    .filer_color_blue{
+    .filter_color_blue{
         filter: invert(72%) sepia(61%) saturate(6928%) hue-rotate(162deg) brightness(95%) contrast(101%);
+    }
+    .filter_color_semi_white{
+        filter: invert(100%) sepia(79%) saturate(164%) hue-rotate(134deg) brightness(112%) contrast(97%);
     }
 }
 
 @layer components{
     .important_link_design{
-        @apply w-9 h-9 p-1 mr-2 hover:filer_color_blue;
+        @apply w-9 h-9 p-1 mr-2 hover:filter_color_blue dark:filter_color_semi_white;
     }
     .nav_item{
-        @apply md:mx-1 mt-1 md:mt-0 w-full md:w-fit flex items-center justify-start rounded-lg  hover:bg-slate-100 ;
+        @apply md:mx-1 mt-1 md:mt-0 w-full md:w-fit flex items-center justify-start rounded-lg  hover:bg-slate-100 dark:hover:bg-slate-700 ;
+    }
+    .ul_svg{
+        @apply md:hidden w-9 h-9 p-1 dark:filter_color_semi_white;
     }
 }
 
