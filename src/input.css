@@ -5,7 +5,7 @@
 .clip-end-dup{
     clip-path: circle(900px);
  }
-.active_dropdown{
+.active{
     display: flex;
 }
 .not_active{

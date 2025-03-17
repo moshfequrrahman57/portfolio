@@ -2,9 +2,18 @@ import { useRef } from "react";
 
 const Layout = (props) => {
     const nav=useRef();
-    // const transparent_div=useRef();
-    
-  
+    const mode=useRef();
+   const setDarkMode=(name)=>{
+    console.log(name);
+    if(name==='light'){localStorage.theme='light';}
+    else if(name==='dark'){localStorage.theme='dark'}
+    else if(name==='system'){localStorage.removeItem('theme')}
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+document.documentElement.classList.toggle(
+  'dark',
+  localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+)
+   }
     return (
       
         <div  className="m-0 p-0 box-border">
@@ -75,10 +84,40 @@ const Layout = (props) => {
               </div>
               
             </ul>
-            <button className="rounded-full hover:bg-slate-100 dark:hover:bg-emerald-200  mx-1 md:mx-14">
-            <img src="/light-mode-svgrepo-com.svg" alt="dark" width={40} height={40} className="p-1"/></button>
+            <div 
+            className="relative rounded-full hover:bg-slate-100 dark:hover:bg-emerald-200  mx-1 md:mx-14">
+            <img onClick={()=>{
+              mode.current.classList.toggle("active");
+              console.log("Button mode click");
+            }} src="/light-mode-svgrepo-com.svg" alt="dark" width={40} height={40} className="p-2 md:p-1"/>
+            <div  ref={mode} className="hidden absolute w-28 h-fit -left-5 top-14 md:top-12  flex-col
+            justify-start z-[60] rounded-lg bg-white dark:bg-slate-600 p-2">
+              <a onClick={()=>{
+                setDarkMode("light");
+                mode.current.classList.toggle("active");
+              }} className="flex items-center dark:text-white font-semibold">
+                <img src="/public/skill.svg" alt="light" className="w-8 h-8 p-1 mr-1 hover:filter_color_blue dark:filter_color_semi_white" />
+                <span>Light</span>
+              </a>
+              <a onClick={()=>{
+                setDarkMode("dark");
+                mode.current.classList.toggle("active");
+              }} className="flex items-center dark:text-white font-semibold">
+                <img src="/public/skill.svg" alt="light" className="w-8 h-8 p-1 mr-1 hover:filter_color_blue dark:filter_color_semi_white" />
+                <span>Dark</span>
+              </a>
+              <a onClick={()=>{
+                setDarkMode("system");
+              }} className="flex items-center dark:text-white font-semibold">
+                <img src="/public/skill.svg" alt="light" className="w-8 h-8 p-1 mr-1 hover:filter_color_blue dark:filter_color_semi_white" />
+                <span>System</span>
+              </a>
+            </div>
+            </div>
+            
             <button onClick={()=>{
                 console.log("Button Clicked");
+                mode.current.classList.toggle("active");
                nav.current.classList.toggle("clip-end-dup");
             }} className="relative rounded-full  hover:bg-slate-100 dark:hover:bg-emerald-200 md:hover:bg-transparent mx-1 md:hidden">
             <img  src="/menu-dots-svgrepo-com.svg" alt="dark" width={40} height={40} className="p-1  md:mx-14 "/></button>
