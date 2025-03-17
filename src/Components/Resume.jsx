@@ -17,4 +17,8 @@ export default Resume;
                 <img src="/public/skill.svg" alt="light" className="w-8 h-8 p-1 mr-1 hover:filter_color_blue dark:filter_color_semi_white" />
                 <span>Dark</span>
               </a>
-            </div> */}
+            </div> 
+            
+              if(name==='light'){localStorage.theme='light'; document.documentElement.classList.remove('dark');}
+   else if(name==='dark'){localStorage.theme='dark';document.documentElement.classList.add('dark');}
+            */}

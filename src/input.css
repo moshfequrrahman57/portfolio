@@ -57,5 +57,8 @@
     .ul_svg{
         @apply md:hidden w-9 h-9 p-1 dark:filter_color_semi_white;
     }
+    .ul_span{
+        @apply mx-2 md:px-1 text-cyan-800 font-bold text-lg md:text-base flex items-center justify-center dark:text-white;
+    }
 }
 
