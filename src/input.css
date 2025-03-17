@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .clip-end-dup{
-    clip-path: circle(400px);
+    clip-path: circle(900px);
  }
 .active_dropdown{
     display: flex;
