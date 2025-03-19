@@ -45,11 +45,32 @@
     .filter_color_semi_white{
         filter: invert(100%) sepia(79%) saturate(164%) hue-rotate(134deg) brightness(112%) contrast(97%);
     }
+    .webkit-text-outline-dark{
+        color: red;
+        -webkit-text-fill-color: rgb(121, 106, 122);
+        -webkit-text-stroke: 3px rgb(236, 229, 229);
+       
+    }
+    .webkit-text-outline{
+        color: black;
+        -webkit-text-fill-color: rgb(255, 251, 250);
+        -webkit-text-stroke: 3px rgb(235, 70, 139);
+        
+    }
+    .filter_color_citrine{
+        filter: invert(75%) sepia(43%) saturate(1033%) hue-rotate(8deg) brightness(104%) contrast(92%);
+    }
+    .filter_color_celadon{
+        filter: invert(93%) sepia(12%) saturate(834%) hue-rotate(60deg) brightness(97%) contrast(82%);
+    }
 }
 
 @layer components{
     .important_link_design{
         @apply w-9 h-9 p-1 mr-2 hover:filter_color_blue dark:filter_color_semi_white;
+    }
+    .important_link_in_profile{
+        @apply w-10 h-10 rounded-full  mr-2 filter_color_celadon hover:filter_color_blue dark:filter_color_citrine;
     }
     .nav_item{
         @apply md:mx-1 mt-1 md:mt-0 w-full md:w-fit flex items-center justify-start rounded-lg  hover:bg-slate-100 dark:hover:bg-slate-700 ;
