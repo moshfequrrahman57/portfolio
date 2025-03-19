@@ -30,6 +30,8 @@
   @apply absolute  top-0 left-0 w-full h-screen bg-emerald-300 -z-10;
 }
 
+
+
 @layer utilities{
    .clip-start {
         clip-path: circle(0px at right bottom);
@@ -63,6 +65,14 @@
     .filter_color_celadon{
         filter: invert(93%) sepia(12%) saturate(834%) hue-rotate(60deg) brightness(97%) contrast(82%);
     }
+    .animation_before{
+        @apply translate-y-0  opacity-20 duration-[1500ms] transition-all;
+    }
+    .anim{
+        @apply -translate-y-10 opacity-100
+    }
+    
+    
 }
 
 @layer components{
@@ -81,5 +91,6 @@
     .ul_span{
         @apply mx-2 md:px-1 text-cyan-800 font-bold text-lg md:text-base flex items-center justify-center dark:text-white;
     }
+    
 }
 

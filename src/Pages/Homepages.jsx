@@ -8,6 +8,7 @@ const Homepages = () => {
     return (
        <Layout>
        <Profile/>
+       
        </Layout>
     );
 };

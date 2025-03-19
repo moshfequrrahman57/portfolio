@@ -8,7 +8,11 @@ const Layout = (props) => {
       const newColorMode=event.matches? 'dark':'light';
       console.log(newColorMode);
       setDarkMode('system');
-    })
+    });
+    const layout_div=useRef();
+    const scrollDetect=()=>{
+      console.log("Layout Scrolling");
+    }
     useEffect(()=>{
       (
         ()=>{
@@ -51,7 +55,7 @@ const Layout = (props) => {
    }
     return (
       
-        <div  className="m-0 p-0 box-border">
+        <div ref={layout_div} onScroll={scrollDetect}  className="overflow-y-auto h-screen m-0 p-0 box-border">
         <header className=" shadow-lg m-3 w-[calc(100%-24px)] fixed top-0 left-0 rounded-lg border
         flex items-center justify-between bg-gradient-to-r from-slate-400 dark:from-slate-900 to-orange-100 z-30 dark:to-slate-400">
             <figure><a href="#" className="cursor-pointer">
