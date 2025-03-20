@@ -69,7 +69,13 @@
         @apply translate-y-0  opacity-20 duration-[1500ms] transition-all;
     }
     .anim{
-        @apply -translate-y-10 opacity-100
+        @apply -translate-y-10 opacity-100;
+    }
+    .animation_skill{
+        @apply translate-y-0  opacity-20 duration-[1000ms] hover:scale-100  transition-all;
+    }
+    .anim_skill{
+        @apply -translate-y-10 opacity-100 hover:scale-105;
     }
     
     
@@ -90,6 +96,9 @@
     }
     .ul_span{
         @apply mx-2 md:px-1 text-cyan-800 font-bold text-lg md:text-base flex items-center justify-center dark:text-white;
+    }
+    .skill_card{
+        @apply w-full  border flex flex-col items-center justify-around bg-slate-100 shadow-md p-2 rounded-md;
     }
     
 }

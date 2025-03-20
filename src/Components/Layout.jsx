@@ -9,10 +9,15 @@ const Layout = (props) => {
       console.log(newColorMode);
       setDarkMode('system');
     });
+
+// layout scrolling
     const layout_div=useRef();
     const scrollDetect=()=>{
       console.log("Layout Scrolling");
     }
+
+
+
     useEffect(()=>{
       (
         ()=>{
