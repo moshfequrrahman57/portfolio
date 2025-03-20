@@ -1,6 +1,12 @@
 import { useEffect, useRef } from "react";
 
 const Layout = (props) => {
+
+
+
+
+
+
     const nav=useRef();
     const mode=useRef();
     const dark_img=useRef();
@@ -12,11 +18,17 @@ const Layout = (props) => {
 
 // layout scrolling
     const layout_div=useRef();
-    const scrollDetect=()=>{
-      console.log("Layout Scrolling");
+    const moveToSkill=()=>{
+      console.log("Skill button clicked");
+      layout_div.current.scrollTop=600;
+      nav.current.classList.toggle("clip-end-dup");
     }
-
-
+    
+    const moveToHome=()=>{
+      console.log("Home button clicked");
+      layout_div.current.scrollTop=0;
+      nav.current.classList.toggle("clip-end-dup");
+    }
 
     useEffect(()=>{
       (
@@ -60,7 +72,7 @@ const Layout = (props) => {
    }
     return (
       
-        <div ref={layout_div} onScroll={scrollDetect}  className="overflow-y-auto h-screen m-0 p-0 box-border">
+        <div ref={layout_div}  className="overflow-y-auto h-screen m-0 p-0 box-border">
         <header className=" shadow-lg m-3 w-[calc(100%-24px)] fixed top-0 left-0 rounded-lg border
         flex items-center justify-between bg-gradient-to-r from-slate-400 dark:from-slate-900 to-orange-100 z-30 dark:to-slate-400">
             <figure><a href="#" className="cursor-pointer">
@@ -78,14 +90,14 @@ const Layout = (props) => {
                 <img src="/moshfequr.jpg" alt="moshfequr" className="w-full h-24  rounded-t-lg object-cover  " />
               </div>
               <div className="flex flex-col md:flex-row items-center justify-center m-4 pb-3 md:pb-0 md:m-0 border-b-2 border-slate-500 md:border-none">
-                   <a href="#" className="nav_item" >
+                   <button onClick={moveToHome} href="#" className="nav_item" >
                     <img src="/home-svgrepo-com.svg" alt="home" className="ul_svg" />
                     <span className="ul_span">Home</span>
-                   </a>
-                   <a href="#" className="nav_item" >
+                   </button>
+                   <button onClick={moveToSkill} href="#" className="nav_item" >
                     <img src="/skill.svg" alt="skill" className="ul_svg" />
                     <span className="ul_span">Skill</span>
-                   </a>
+                   </button>
                    <a href="#" className="nav_item" >
                     <img src="/services.svg" alt="services" className="ul_svg" />
                     <span className="ul_span">Services</span>

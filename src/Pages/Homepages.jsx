@@ -5,10 +5,11 @@ import Skills from '../Components/Skills';
 
 const Homepages = () => {
 
+
  
     return (
-       <Layout>
-       <Profile />
+       <Layout >
+       <Profile/>
        <Skills/>
        </Layout>
     );

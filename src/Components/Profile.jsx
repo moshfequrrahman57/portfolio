@@ -1,16 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const Profile = ({ sendDataToParent }) => {
+const Profile = ({ handleOpen}) => {
 const main_div=useRef();
-const [clicked,isClicked]=useState(false);
-const moveToProject=()=>{
-  console.log(`Button clicked`);
-  isClicked(true);
-  sendDataToParent(clicked);
-}
-const scrollChange=(event)=>{
-   console.log("Profile Scrolling");
-}
+//const [clicked,isClicked]=useState(false);
+
 
 
 useEffect(()=>{
@@ -42,7 +35,7 @@ name.forEach(name=> observer.observe(name));
   )()
 },[])
     return (
-        <div id='main' ref={main_div} onScroll={scrollChange}   className='overflow-y-auto scroll-smooth mx-5 my-32 py-16 w-[calc(100%-40px] h-fit flex flex-col items-start md:items-center justify-start  md:justify-start'>
+        <div id='main' ref={main_div}  className='overflow-y-auto scroll-smooth mx-5 mt-32 mb-32 py-16 w-[100%-40px] h-fit flex flex-col items-start md:items-center justify-start  md:justify-start'>
            
             <p id='name' className=' text-4xl md:text-6xl font-extrabold animation_before mx-2'>Md. Moshfequr Rahman.</p>
             <p className='text-3xl md:text-5xl font-bold mt-2 animation_before delay-500 mx-2 '>Frontend developer</p>
@@ -57,16 +50,16 @@ name.forEach(name=> observer.observe(name));
               <a href="#"> <img src="/linkedin-round-svgrepo-com.svg" alt="linkedIn" className="important_link_in_profile" /></a>
               <a href="#"> <img src="/instagram-rounded-svgrepo-com.svg" alt="insta" className="important_link_in_profile" /></a>
               </div>
-              <div className='flex gap-10 mt-5 md:mt-8 '>
-              <div className="flex items-center justify-start mx-2">
+              <div className='flex mt-5 md:mt-8 w-full justify-around md:justify-center md:gap-7'>
+              <div className="flex items-center justify-center">
                   <button  className="my-1 px-5 py-2 font-semibold text-base inline-block rounded-lg bg-blue-400 hover:bg-cyan-200 
                 hover:transition-colors text-white hover:text-black
                 ring-2 ring-offset-2 ring-blue-400"><a href="#">Resume</a></button>
               </div>
-              <div className="flex items-center justify-start ">
-                  <button onClick={moveToProject} className="my-1 px-5 py-2 font-semibold text-base inline-block rounded-lg bg-blue-400 hover:bg-cyan-200 
+              <div className="flex items-center justify-center">
+                  <button onClick={handleOpen} className="my-1 px-5 py-2 font-semibold text-base inline-block rounded-lg bg-blue-400 hover:bg-cyan-200 
                 hover:transition-colors text-white hover:text-black
-                ring-2 ring-offset-2 ring-blue-400"><a href="#">Checkout y Projects</a></button>
+                ring-2 ring-offset-2 ring-blue-400"><a href="#">Checkout my Projects</a></button>
               </div>
               </div> 
         </div>
