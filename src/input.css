@@ -78,13 +78,13 @@
         @apply -translate-y-10 opacity-100 hover:scale-105;
     }
     .grid_columns_3{
-         grid-auto-columns: calc(calc(100% /3) - 12px);
+         grid-auto-columns: calc(calc(100% /3) - 0px);
     }
     .grid_columns_2{
-        grid-auto-columns: calc(calc(100% /2) - 8px);
+        grid-auto-columns: calc(calc(100% /2) - 0px);
     }
     .grid_columns_1{
-        grid-auto-columns: calc(calc(100%) - 4px);
+        grid-auto-columns: calc(calc(100%) - 0px);
     }
 }
 
