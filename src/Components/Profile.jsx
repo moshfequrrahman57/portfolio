@@ -29,8 +29,6 @@ console.log("Ok");
 name.forEach(name=> observer.observe(name));
 // observer.observe(name);
 
-
- 
     }
   )()
 },[])

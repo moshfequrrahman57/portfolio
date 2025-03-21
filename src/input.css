@@ -77,8 +77,15 @@
     .anim_skill{
         @apply -translate-y-10 opacity-100 hover:scale-105;
     }
-    
-    
+    .grid_columns_3{
+         grid-auto-columns: calc(calc(100% /3) - 12px);
+    }
+    .grid_columns_2{
+        grid-auto-columns: calc(calc(100% /2) - 8px);
+    }
+    .grid_columns_1{
+        grid-auto-columns: calc(calc(100%) - 4px);
+    }
 }
 
 @layer components{
@@ -100,6 +107,7 @@
     .skill_card{
         @apply w-full  border flex flex-col items-center justify-around bg-slate-100 shadow-md p-2 rounded-md;
     }
+  
     
 }
 
