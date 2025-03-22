@@ -192,8 +192,8 @@ let touchstartX,touchstartY,touchendX,touchendY;
     return (
   <div className='flex flex-col items-center justify-around h-[50vh] mx-12   relative my-20'>
           
-        <img onClick={scrollOneColumnLeft} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow_left" className='w-12 h-12 absolute top-[calc(50% -20px)] left-1 md:left-2  rounded-full border-2 cursor-pointer hover:filter_color_blue' />
-        <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className='w-12 h-12 absolute top-[calc(50% -20px)] right-1 md:right-2 rotate-180 rounded-full border-2 cursor-pointer hover:filter_color_blue' />
+        <img onClick={scrollOneColumnLeft} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow_left" className='hidden md:block w-12 h-12 absolute top-[calc(50% -20px)] left-1 md:left-2  rounded-full border-2 cursor-pointer hover:filter_color_blue' />
+        <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className='hidden md:block w-12 h-12 absolute top-[calc(50% -20px)] right-1 md:right-2 rotate-180 rounded-full border-2 cursor-pointer hover:filter_color_blue' />
           
            <ul onTouchStart={touch_start} onTouchEnd={touch_end} ref={slider} className='list-none bg-white rounded-lg 
            grid grid-flow-col grid_columns_1 sm:grid_columns_2 md:grid_columns_3 gap-4 scroll-smooth overflow-hidden'>
