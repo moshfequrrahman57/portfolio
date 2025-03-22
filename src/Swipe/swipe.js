@@ -2,7 +2,7 @@
 
 let touchstartX,touchstartY,touchendX,touchendY;
 
-const touch_start=(event)=>{
+ const touch_start=(event)=>{
     touchstartX = event.changedTouches[0].screenX;
     touchstartY = event.changedTouches[0].screenY;
     console.log(touchstartX,touchstartY);

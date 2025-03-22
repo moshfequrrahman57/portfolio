@@ -152,16 +152,50 @@ function getBreakPoint(){
 }
 /// breakpoint end
 
+///touch section starts
+
+let touchstartX,touchstartY,touchendX,touchendY;
+
+ const touch_start=(event)=>{
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+    console.log(touchstartX,touchstartY);
+  }
+  const touch_end=(event)=>{
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    console.log(touchendX,touchendY);
+    handle_gesture();
+  }
+
+ function handle_gesture(){
+    if (touchendX < touchstartX) {
+      if(Math.abs(touchendX-touchstartX)>20){
+        console.log('Swiped Left');
+        
+        scrollOneColumnRight();
+      }
+  }
+  if (touchendX > touchstartX) {
+    if(Math.abs(touchendX-touchstartX)>20){
+      console.log('Swiped Right');
+      scrollOneColumnLeft();
+    }
+  }
+
+  }
+
+///touch section end
 
 
 
     return (
-  <div className='flex flex-col items-center justify-around h-[50vh] bg-green-300 mx-12   relative my-20'>
+  <div className='flex flex-col items-center justify-around h-[50vh] mx-12   relative my-20'>
           
-        <img onClick={scrollOneColumnLeft} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow_left" className='w-10 h-10 absolute top-[calc(50% -20px)] left-2' />
-        <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className='w-10 h-10 absolute top-[calc(50% -20px)] right-2 rotate-180' />
+        <img onClick={scrollOneColumnLeft} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow_left" className='w-12 h-12 absolute top-[calc(50% -20px)] left-1 md:left-2  rounded-full border-2 cursor-pointer hover:filter_color_blue' />
+        <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className='w-12 h-12 absolute top-[calc(50% -20px)] right-1 md:right-2 rotate-180 rounded-full border-2 cursor-pointer hover:filter_color_blue' />
           
-           <ul  ref={slider} className='list-none bg-white rounded-lg 
+           <ul onTouchStart={touch_start} onTouchEnd={touch_end} ref={slider} className='list-none bg-white rounded-lg 
            grid grid-flow-col grid_columns_1 sm:grid_columns_2 md:grid_columns_3 gap-4 scroll-smooth overflow-hidden'>
             
             <li>
@@ -209,13 +243,13 @@ function getBreakPoint(){
             
             
            </ul>
-        <div className='flex items-center'>
-          <div ref={one} className='w-10 h-2 border border-black bg-orange-400 mx-2 '></div>
-          <div ref={two} className='w-10 h-2 border border-black bg-orange-400 mx-2'></div>
-          <div ref={three} className='w-10 h-2 border border-black bg-orange-400 mx-2'></div>
-          <div ref={four} className='w-10 h-2 border border-black bg-orange-400 mx-2'></div>
-          <div ref={five} className=' md:hidden w-10 h-2 border border-black bg-violet-500 mx-2'></div>
-          <div ref={six} className=' sm:hidden w-10 h-2 border border-black bg-green-500 mx-2'></div>
+        <div className='absolute bottom-0  left-[50%-96px] md:left- flex items-center mb-3'>
+          <div ref={one} className='w-6 md:w-10 h-1 border border-black bg-yellow-400  mx-1 '></div>
+          <div ref={two} className='w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
+          <div ref={three} className='w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
+          <div ref={four} className='w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
+          <div ref={five} className=' md:hidden w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
+          <div ref={six} className=' sm:hidden w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
          </div>
         
   </div>

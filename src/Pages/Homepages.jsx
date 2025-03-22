@@ -11,7 +11,8 @@ const Homepages = () => {
  
     return (
        <Layout >
-     
+       <Profile/>
+       <Skills/>
        <Services/>
        </Layout>
     );
