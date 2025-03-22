@@ -59,7 +59,7 @@ const Services = () => {
     }
 ///pagination end in useEffect
 
-
+ getBreakPoint();
 
   },[scrollValue,maxSlidePosition,slidePosition])
 ////iife starts
@@ -171,14 +171,14 @@ let touchstartX,touchstartY,touchendX,touchendY;
  function handle_gesture(){
     if (touchendX < touchstartX) {
       if(Math.abs(touchendX-touchstartX)>20){
-        console.log('Swiped Left');
+        alert('Swiped Left');
         
         scrollOneColumnRight();
       }
   }
   if (touchendX > touchstartX) {
     if(Math.abs(touchendX-touchstartX)>20){
-      console.log('Swiped Right');
+      alert('Swiped Right');
       scrollOneColumnLeft();
     }
   }
@@ -196,7 +196,7 @@ let touchstartX,touchstartY,touchendX,touchendY;
         <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className='hidden md:block w-12 h-12 absolute top-[calc(50% -20px)] right-1 md:right-2 rotate-180 rounded-full border-2 cursor-pointer hover:filter_color_blue' />
           
            <ul onTouchStart={touch_start} onTouchEnd={touch_end} ref={slider} className='list-none bg-white rounded-lg 
-           grid grid-flow-col grid_columns_1 sm:grid_columns_2 md:grid_columns_3 gap-4 overflow-hidden'>
+           grid grid-flow-col grid_columns_1 sm:grid_columns_2 md:grid_columns_3 gap-4 scroll-smooth overflow-hidden'>
             
             <li>
             <div ref={slider_item} className='border bg-red-500 flex flex-col items-center justify-center'>
