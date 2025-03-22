@@ -190,68 +190,67 @@ let touchstartX,touchstartY,touchendX,touchendY;
 
 
     return (
-  <div className='flex flex-col items-center justify-center h-fit mx-3 my-20'>
-          
-        
-           <ul onTouchStart={touch_start} onTouchEnd={touch_end} ref={slider} className='list-none bg-white rounded-lg 
-           grid grid-flow-col grid_columns_1 sm:grid_columns_2 md:grid_columns_3 gap-4 scroll-smooth overflow-hidden relative h-[400px]
-           items-center'>
+  <div className='flex flex-col items-center justify-center w-[calc(100%-40px)] h-fit mx-5 my-20'>
+         
+           <ul onTouchStart={touch_start} onTouchEnd={touch_end} ref={slider} className='list-none  rounded-lg 
+           grid grid-flow-col grid_columns_1 sm:grid_columns_2 md:grid_columns_3 gap-4 scroll-smooth overflow-hidden  h-fit w-full
+           '>
             
-            <img onClick={scrollOneColumnLeft} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow_left" className=' w-14 h-14 absolute top-[calc(50% -20px)] left-1 md:left-2  rounded-full border-2 cursor-pointer hover:filter_color_blue' />
-        <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className=' w-14 h-14 absolute top-[calc(50% -20px)] right-1 md:right-2 rotate-180 rounded-full border-2 cursor-pointer hover:filter_color_blue' />
-          
+             
 
             <li>
-            <div ref={slider_item} className='border bg-red-500 flex flex-col items-center justify-center'>
-            <img src="/linkedin-round-svgrepo-com.svg" alt="ln" className='rounded-full w-40 h-40 object-cover' />
-           <p>1 In</p>
-           <p>Lorem ipsum dolor sit amet.</p>
+            <div ref={slider_item} className='border bg-gray-300 shadow-sm w-full min-h-72  flex flex-col p-4 rounded-lg'>
+            <img src="/design-systems-svgrepo-com.svg" alt="frontend" className='w-16 h-16' />
+           <p className='font-semibold text-2xl'>Frontend website Devlopment</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi quos id cumque. Ducimus placeat distinctio quo praesentium beatae quasi!</p>
             </div>
             </li>
             <li>
-            <div className='border bg-red-500 flex flex-col items-center justify-center'>
-            <img src="/linkedin-round-svgrepo-com.svg" alt="ln" className='rounded-full w-40 h-40 object-cover' />
-           <p>2 In</p>
-           <p>Lorem ipsum dolor sit amet.</p>
+            <div ref={slider_item} className='border bg-gray-300 shadow-sm w-full min-h-72  flex flex-col p-4 rounded-lg'>
+            <img src="/responsive-svgrepo-com.svg" alt="responsive" className='w-16 h-16' />
+           <p className='font-semibold text-2xl'>Responsive Design</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi quos id cumque. Ducimus placeat distinctio quo praesentium beatae quasi!</p>
             </div>
             </li>
             <li>
-            <div className='border bg-red-500 flex flex-col items-center justify-center'>
-            <img src="/linkedin-round-svgrepo-com.svg" alt="ln" className='rounded-full w-40 h-40 object-cover' />
-           <p>3 In</p>
-           <p>Lorem ipsum dolor sit amet.</p>
+            <div ref={slider_item} className='border bg-gray-300 shadow-sm w-full min-h-72  flex flex-col p-4 rounded-lg'>
+            <img src="/api-svgrepo-com.svg" alt="api" className='w-16 h-16' />
+           <p className='font-semibold text-2xl'>API Integration</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi quos id cumque. Ducimus placeat distinctio quo praesentium beatae quasi!</p>
             </div>
             </li>
             <li>
-            <div className='border bg-red-500 flex flex-col items-center justify-center'>
-            <img src="/linkedin-round-svgrepo-com.svg" alt="ln" className='rounded-full w-40 h-40 object-cover' />
-           <p>4 In</p>
-           <p>Lorem ipsum dolor sit amet.</p>
+            <div ref={slider_item} className='border bg-gray-300 shadow-sm w-full min-h-72  flex flex-col p-4 rounded-lg'>
+            <img src="/photoshop-svgrepo-com.svg" alt="ps" className='w-16 h-16' />
+           <p className='font-semibold text-2xl'>Work with photoshop</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi quos id cumque. Ducimus placeat distinctio quo praesentium beatae quasi!</p>
             </div>
             </li>
             <li>
-            <div className='border bg-red-500 flex flex-col items-center justify-center'>
-            <img src="/linkedin-round-svgrepo-com.svg" alt="ln" className='rounded-full w-40 h-40 object-cover' />
-           <p>5 In</p>
-           <p>Lorem ipsum dolor sit amet.</p>
+            <div ref={slider_item} className='border bg-gray-300 shadow-sm w-full min-h-72  flex flex-col p-4 rounded-lg'>
+            <img src="/key-7-svgrepo-com.svg" alt="authen" className='w-16 h-16' />
+           <p className='font-semibold text-2xl'>Data Authentication</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi quos id cumque. Ducimus placeat distinctio quo praesentium beatae quasi!</p>
             </div>
             </li>
             <li>
-            <div className='border bg-red-500 flex flex-col items-center justify-center'>
-            <img src="/linkedin-round-svgrepo-com.svg" alt="ln" className='rounded-full w-40 h-40 object-cover' />
-           <p>6 In</p>
-           <p>Lorem ipsum dolor sit amet.</p>
+            <div ref={slider_item} className='border bg-gray-300 shadow-sm w-full min-h-72  flex flex-col p-4 rounded-lg'>
+            <img src="/datastore-svgrepo-com.svg" alt="backend" className='w-16 h-16' />
+           <p className='font-semibold text-2xl'>Backend Service</p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi quos id cumque. Ducimus placeat distinctio quo praesentium beatae quasi!</p>
             </div>
             </li>
             
            </ul>
-        <div className='absolute bottom-0  left-[50%-96px] md:left- flex items-center mb-3'>
-          <div ref={one} className='w-6 md:w-10 h-1 border border-black bg-yellow-400  mx-1 '></div>
-          <div ref={two} className='w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
-          <div ref={three} className='w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
-          <div ref={four} className='w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
-          <div ref={five} className=' md:hidden w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
-          <div ref={six} className=' sm:hidden w-6 md:w-10 h-1 border border-black bg-yellow-400 mx-1'></div>
+        <div className=' bottom-0  left-[50%-96px] md:left- flex items-center mb-3 mt-3'>
+        <img onClick={scrollOneColumnLeft} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow_left" className=' w-10 h-10   rounded-full border-2 cursor-pointer hover:filter_color_blue' />
+        <div ref={one} className='w-3 md:w-5 h-1 border bg-[#CBD5E1]  mx-1 '></div>
+          <div ref={two} className='w-3 md:w-5 h-1 border bg-[#CBD5E1] mx-1'></div>
+          <div ref={three} className='w-3 md:w-5 h-1 border bg-[#CBD5E1]  mx-1'></div>
+          <div ref={four} className='w-3 md:w-5 h-1 border bg-[#CBD5E1]  mx-1'></div>
+          <div ref={five} className=' md:hidden w-3 md:w-5 h-1 border bg-[#CBD5E1]  mx-1'></div>
+          <div ref={six} className=' sm:hidden w-3 md:w-5 h-1 border bg-[#CBD5E1]  mx-1'></div>
+          <img onClick={scrollOneColumnRight} src="/button-circle-round-arrow-left-svgrepo-com.svg" alt="arrow right" className=' w-10 h-10  rotate-180 rounded-full border-2 cursor-pointer hover:filter_color_blue' />
          </div>
         
   </div>
